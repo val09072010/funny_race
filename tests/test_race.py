@@ -2,7 +2,7 @@ import pytest
 from race import track_factory, max_velocity, NaiveStrategy
 
 
-# yes I know - it should converted to fixtures and be moved into con
+# yes I know - it should converted to fixtures and be moved into conftest.py but ...
 l_small = [0, 1, 1, -1, 1, -1, 1, 1, -1, 1]
 l_simple = [0, 1, 1, 1, 1, 1, -1, 1, 1, -1, 1, 1, 1, 1, 1, -1, 1, 1]
 l_narrow = [0, 1, 1, -1, 1, 1, 1, 1, 1, 1, -1, 1, 1, -1, 1, 1, 1, 1, 1, 1]
