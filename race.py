@@ -187,9 +187,10 @@ class NaiveStrategy(DefaultStrategy):
                 ids.append((i, c))
 
         for i, v in ids:
-            new_v = NaiveStrategy.run_segment(c_v, c_i, i, v, schema)
-            c_i = i
-            c_v = new_v
+            while c_i != i:
+                new_v = NaiveStrategy.run_segment(c_v, c_i, i, v, schema)
+                c_i += new_v
+                c_v = new_v
         return ''.join(map(str, schema))
 
 
